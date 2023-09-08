@@ -158,7 +158,7 @@ MultiplyMatrix(matrixOne, matrixTwo, multyMatrix);
 Console.WriteLine($"Произведение матриц:");
 PrintArray(multyMatrix);
 
-void MultiplyMatrix(int[,] matrixOne, int[,] smatrixTwo, int[,] multyMatrix)
+void MultiplyMatrix(int[,] matrixOne, int[,] matrixTwo, int[,] multyMatrix)
 {
   for (int i = 0; i < multyMatrix.GetLength(0); i++)
   {
@@ -167,7 +167,7 @@ void MultiplyMatrix(int[,] matrixOne, int[,] smatrixTwo, int[,] multyMatrix)
       int sum = 0;
       for (int k = 0; k < matrixOne.GetLength(1); k++)
       {
-        sum += matrixOne[i,k] * smatrixTwo[k,j];
+        sum += matrixOne[i,k] * matrixTwo[k,j];
       }
       multyMatrix[i,j] = sum;
     }
